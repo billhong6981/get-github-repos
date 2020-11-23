@@ -47,7 +47,10 @@ const SearchPage = () => {
                   var node1 = document.getElementById('select-1');
                   var node2 = document.getElementById('search-1');
                   localStorage.setItem('userType', node1.value);
-                  localStorage.setItem('userName', node2.value);
+                  localStorage.setItem(
+                    'userName',
+                    node2.value.trim().toLowerCase()
+                  );
                 }}>
                 <Link1 element={Link} to="/repos">
                   SEND
